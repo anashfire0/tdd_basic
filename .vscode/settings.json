@@ -1,3 +1,5 @@
 {
-    "python.pythonPath": "/home/ash/Documents/DIY-CS/tdd/django_tdd/env/bin/python"
+    "python.pythonPath": "/home/ash/Documents/DIY-CS/tdd/django_tdd/env/bin/python",
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true
 }
