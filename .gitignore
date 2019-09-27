@@ -1,0 +1,6 @@
+env/
+__pycache__/
+*.code-workspace
+*.pyc
+db.sqlite3
+geckodriver.log
