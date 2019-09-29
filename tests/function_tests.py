@@ -34,13 +34,19 @@ class NewVisitorTest(unittest.TestCase):
         inputbox.send_keys(Keys.ENTER)
         time.sleep(1)
 
+
+
+        #do the same for buy a peacock
+        inputbox = self.browser.find_element_by_id('id_new_item')
+        inputbox.send_keys('Buy a Peacock.')
+        inputbox.send_keys(Keys.ENTER)
+        time.sleep(1)
+
+        
         table = self.browser.find_element_by_id('id_list_table')
         rows = table.find_elements_by_tag_name('tr')
-        time.sleep(20)
-        self.assertTrue(
-            any(row.text == '1. Buy a Beer' for row in rows),
-            "New to-do entry did not appear in the table"
-        )
+        self.assertIn('1. Buy a Beer', [row.text for row in rows])
+        self.assertIn('2. Buy a Peacock', [row.text for row in rows])
 
 
         #there's still text inviting her to add more to-dos
